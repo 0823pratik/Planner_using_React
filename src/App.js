@@ -82,7 +82,7 @@ function App() {
       ))}
       <div className="color-change-button">
         <p>Do you want to change the color of the page?</p>
-        <button onClick={handleChangeColor}>Click me</button>
+        <button onClick={handleChangeColor}>Click Here!!</button>
       </div>
     </main>
   );
