@@ -1,38 +1,172 @@
-.App {
+body{
+  background-color: #17181f;
+  color: #ddd;
+}
+*{
+  box-sizing: border-box;
+}
+main{
+  max-width: 300px;
+  margin: 20px auto;
+}
+form{
+  border: 3px solid #30313D;
+  border-radius: 10px;
+  padding: 5px;
+  display:flex;
+}
+form input[type="text"] {
+  background: none;
+  color:#fff;
+  border:0;
+  padding: 0 8px;
+  display:block;
+  width: 100%;
+}
+form button{
+  background-color: #61DAFB;
+  border:0;
+  border-radius: 6px;
+  cursor:pointer;
+}
+
+div.task{
+  background-color: #30313D;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display:flex;
+  align-items: center;
+  transition: opacity .3s linear;
+}
+div.task svg{
+  height: 20px;
+  margin-right: 6px;
+  fill: #61DAFB;
+}
+div.task.done{
+  opacity: 0.3;
+}
+div.task-name, div.task form{
+  flex-grow:1;
+}
+div.task span{
+  position:relative;
+}
+div.task span:before{
+  content:'';
+  display:block;
+  width:0;
+  height:1px;
+  background-color: #ddd;
+  position:absolute;
+  top: 10px;
+  transition: width .1s linear;
+}
+div.task.done span:before{
+  width: 100%;
+}
+
+h1, h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div.checkbox{
+  display:flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.trash{
+  background:none;
+  border:none;
+  display:flex;
+  cursor:pointer;
+}
+button.trash svg{
+  fill: #888;
+  height: 14px;
+}
+div.task input{
+  border: 2px solid #555;
+  border-radius:5px;
+  padding: 2px 4px;
+}
+body.dark-theme {
+  background-color: black;
+  color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Add additional styling for your app */
+.button-wrapper-light {
+  background-color: lightgray;
+}
+
+.button-wrapper-dark {
+  background-color: darkgray;
+}
+
+/* Style for the color change button */
+.color-change-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.color-change-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.color-change-button button:hover {
+  background-color: #555;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Style for the color change button */
+.color-change-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.color-change-button button {
+  padding: 10px 20px;
+  font-size: 16px;
   color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-change-button button:hover {
+  background-color: #555;
 }
